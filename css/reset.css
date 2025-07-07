@@ -1,0 +1,93 @@
+/* ===================== */
+/*       CSS RESET        */
+/* ===================== */
+/* Автор: Ваше имя/ник    */
+/* Версия: 2.0 (2024)    */
+/* ===================== */
+
+/* Убираем внутренние отступы и границы */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Базовые настройки HTML и body */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Убираем стандартные стили для списков */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Элементы форм наследуют шрифты */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Убираем анимации для пользователей с prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Сброс стилей для медиа-элементов */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Разрыв длинных слов */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Убираем стандартные стили для ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем outline для доступных элементов */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Скрываем элементы с hidden атрибутом */
+[hidden] {
+  display: none !important;
+}
