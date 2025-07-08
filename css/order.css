@@ -28,7 +28,7 @@
   background: linear-gradient(
     to right,
     transparent,
-    var(--accent-color),
+    var(--bg-color),
     transparent
   );
   margin: 25px 0;
@@ -36,7 +36,7 @@
 }
 
 .highlight {
-  color: var(--accent-color);
+  color: var(--bg-color);
   font-weight: bold;
 }
 
@@ -62,7 +62,7 @@
 .section-title {
   font-size: 1.5rem;
   margin: 25px 0 10px;
-  color: var(--accent-color);
+  color: var(--bg-color);
   text-transform: uppercase;
   text-align: center;
 }

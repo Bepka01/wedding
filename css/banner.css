@@ -17,7 +17,7 @@
 
 .plus-sign {
   font-size: 28px;
-  color: var(--accent-color);
+  color: var(--bg-color);
   font-weight: bold;
 }
 
@@ -75,7 +75,7 @@
   font-family: var(--font-secondary);
   font-size: 18px;
   margin-top: 20px;
-  color: var(--accent-color);
+
   margin-bottom: 20px;
 }
 
