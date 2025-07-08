@@ -126,6 +126,76 @@
         </p>
       </div>
     </div>
+    <div class="order">
+      <div class="invitation-container">
+        <p style="text-align: center; margin-top: 30px; font-size: 1.3rem">
+          <span class="highlight">Ждем Вас на свадьбе!</span>
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="form-group">
+          <label for="fullname"
+            >Фамилия и Имя <span class="highlight">*</span></label
+          >
+          <input type="text" id="fullname" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone"
+            >Номер телефона <span class="highlight">*</span></label
+          >
+          <input type="tel" id="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Количество гостей (включая вас)</label>
+          <input type="number" id="guests" min="1" value="1" />
+        </div>
+
+        <div class="form-group">
+          <label for="transfer">Нужен ли вам трансфер?</label>
+          <select id="transfer">
+            <option value="no">Нет, доберусь самостоятельно</option>
+            <option value="yes">Да, нужен трансфер</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="children">Будет ли с вами ребенок?</label>
+          <select id="children">
+            <option value="no">Нет</option>
+            <option value="yes">Да, будет ребенок</option>
+          </select>
+          <p class="form-note">
+            Укажите количество детей в комментариях если нужно
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="alcohol">Какой алкоголь вы предпочитаете?</label>
+          <select id="alcohol">
+            <option value="any">Без предпочтений</option>
+            <option value="wine">Вино</option>
+            <option value="whiskey">Виски</option>
+            <option value="vodka">Водка</option>
+            <option value="beer">Пиво</option>
+            <option value="none">Не употребляю алкоголь</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Комментарии</label>
+          <input
+            type="text"
+            id="comments"
+            placeholder="Особые диетические требования и др."
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">Подтвердить участие</button>
+      </div>
+    </div>
     <section class="about">
       <div class="container">
         <h3 class="title__about">Свадебное расписание</h3>
