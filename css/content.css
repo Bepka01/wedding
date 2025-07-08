@@ -1,11 +1,10 @@
 :root {
-  --bg-color: rgb(196, 216, 237); /* Голубой цвет фона */
-  --card-bg: white; /* Белый цвет контейнера */
-  --accent-color: #8b5a2b; /* Коричневый акцентный цвет */
-  --text-color: #333; /* Основной цвет текста */
+  --bg-color: rgb(196, 216, 237);
+  --card-bg: white;
+  --accent-color: #8b5a2b;
+  --text-color: #333;
 }
 
-/* Секция с голубым фоном */
 .content {
   background-color: var(--bg-color);
   min-height: 100vh;
