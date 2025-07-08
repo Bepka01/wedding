@@ -58,7 +58,6 @@
   display: block;
 }
 
-/* Стили событий */
 .event {
   display: flex;
   margin-bottom: 35px;
@@ -120,7 +119,6 @@
   padding-bottom: 10px;
 }
 
-/* Адаптация для мобильных */
 @media (max-width: 768px) {
   .title__about {
     font-size: 36px;
