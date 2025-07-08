@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Свадебное расписание</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="about">
+      <div class="container">
+        <h3 class="title__about">Свадебное расписание</h3>
+
+        <!-- Сбор гостей -->
+        <div class="event">
+          <div class="event__time">
+            14:30<br />
+            27.09.2025
+          </div>
+          <div class="event__content">
+            <h4 class="event__title">Сбор гостей</h4>
+            <p class="event__description">
+              Наш день начинается с вас! Встречаемся в уютной атмосфере
+            </p>
+          </div>
+        </div>
+
+        <!-- Церемония -->
+        <div class="event">
+          <div class="event__time">15:00</div>
+          <div class="event__content">
+            <h4 class="event__title">Церемония бракосочетания</h4>
+            <p class="event__description">
+              Торжественный момент, когда мы станем семьей
+            </p>
+          </div>
+        </div>
+
+        <!-- Окончание -->
+        <div class="event">
+          <div class="event__time">23:00</div>
+          <div class="event__content">
+            <h4 class="event__title">Окончание праздника</h4>
+            <p class="event__description">
+              Спасибо, что были частью нашего счастья!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Блок с местом проведения -->
+      <div class="event-location">
+        <h4 class="location__title">Место проведения</h4>
+        <p class="location__place">Агроусадьба "Семисосны"</p>
+        <p class="location__address">
+          Брестский район, Мухавецкий сельсовет, деревня Семисосны, 6/1,
+        </p>
+      </div>
+
+      <!-- Карта на весь экран внизу -->
+      <div class="full-width-map">
+        <div style="position: relative; overflow: hidden">
+          <a
+            href="https://yandex.by/maps/org/agrousadba_semisosny/111285036468/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >Агроусадьба Семисосны</a
+          ><a
+            href="https://yandex.by/maps/29632/brest-district/category/rural_tourism/255921949/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Отдых на ферме в Брестской области</a
+          ><iframe
+            src="https://yandex.by/map-widget/v1/?ll=23.889518%2C52.039375&mode=search&oid=111285036468&ol=biz&z=16.64"
+            width="560"
+            height="400"
+            frameborder="1"
+            allowfullscreen="true"
+            style="position: relative"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
