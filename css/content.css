@@ -31,7 +31,7 @@
 }
 
 .highlight {
-  color: var(--bg-color);
+  color: rgb(196, 216, 237);
   font-weight: bold;
 }
 
@@ -57,7 +57,7 @@
 .section-title {
   font-size: 1.5rem;
   margin: 25px 0 10px;
-  color: var(--bg-color);
+  color: rgb(196, 216, 237);
   text-transform: uppercase;
   text-align: center;
 }
@@ -72,7 +72,7 @@
 
 .rsvp-form {
   margin-top: 40px;
-  border-top: 1px dashed var(--accent-color);
+  border-top: 1px dashed rgb(196, 216, 237);
   padding-top: 30px;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .submit-btn {
-  background-color: var(--accent-color);
+  background-color: var(--bg-color);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -117,7 +117,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #6d4a2a;
+  background-color: var(--bg-color);
 }
 
 @media (max-width: 500px) {
