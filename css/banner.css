@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .banner {
   background-color: var(--bg-color);
 
@@ -184,3 +185,5 @@
 .banner__text p {
   animation: fadeIn 1s ease-out;
 }
+=======
+>>>>>>> bf446e66e2fd6d01dc8be79bd420ce186d99e8ea
