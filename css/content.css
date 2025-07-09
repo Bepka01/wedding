@@ -30,9 +30,10 @@
   font-size: 1.8rem;
 }
 
-.highlight {
-  color: rgb(196, 216, 237);
-  font-weight: bold;
+.highlight__content {
+  font-weight: 900;
+  font-size: 24px;
+  color: #333;
 }
 
 .content__photo {
@@ -42,6 +43,11 @@
   margin: 15px auto;
   display: block;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.highlight__data-content {
+  font-size: 22px;
+  color: #333;
+  font-weight: 900;
 }
 
 .signature {
@@ -54,10 +60,10 @@
   gap: 20px;
 }
 
-.section-title {
+.section-title-content {
   font-size: 1.5rem;
   margin: 25px 0 10px;
-  color: rgb(196, 216, 237);
+  color: #333;
   text-transform: uppercase;
   text-align: center;
 }
@@ -124,6 +130,9 @@
   .invitation-container {
     padding: 30px 20px;
   }
+  .highlight__data-content {
+    font-size: 20px;
+  }
 
   .header {
     font-size: 1.6rem;
@@ -131,6 +140,9 @@
 
   .section-title {
     font-size: 1.3rem;
+  }
+  .highlight__content {
+    font-size: 20px;
   }
 
   .signature {
