@@ -32,7 +32,7 @@
 
 .highlight__content {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 18px;
   color: #333;
 }
 
@@ -142,7 +142,7 @@
     font-size: 1.3rem;
   }
   .highlight__content {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .signature {
