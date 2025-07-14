@@ -1,7 +1,7 @@
 * {
   font-family: "Cormorant Infant", serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -46,6 +46,9 @@
 .highlight__order {
   color: #333;
   font-weight: bold;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .content__photo {

@@ -28,9 +28,8 @@
   text-align: center;
   margin-bottom: 25px;
   font-size: 1.8rem;
-  font-family: "Cormorant Infant", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -51,10 +50,8 @@
 .highlight__data-content {
   font-size: 22px;
   color: #333;
-  font-weight: 900;
-  font-family: "Cormorant Infant", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -66,9 +63,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-family: "Cormorant Infant", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -76,11 +72,9 @@
   font-size: 1.5rem;
   margin: 25px 0 10px;
   color: #333;
-  text-transform: uppercase;
   text-align: center;
-  font-family: "Cormorant Infant", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
   font-style: normal;
 }
 .invitation-container {
@@ -100,6 +94,12 @@
 
 .form-group {
   margin-bottom: 20px;
+}
+
+.highlight-content {
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .form-group label {

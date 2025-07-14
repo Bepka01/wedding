@@ -14,7 +14,9 @@
   font-size: 42px;
   margin-bottom: 40px;
   color: #5a3e2b;
-  font-weight: 700;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .event-location {
@@ -29,9 +31,8 @@
   font-size: 28px;
   color: #5a3e2b;
   margin-bottom: 15px;
-  font-family: "Cormorant Infant", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
   font-style: normal;
 }
 
