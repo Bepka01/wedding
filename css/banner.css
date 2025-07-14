@@ -128,6 +128,10 @@
   margin-top: 8px;
   font-size: 14px;
   text-transform: uppercase;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .timer-separator {
