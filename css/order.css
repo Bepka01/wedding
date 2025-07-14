@@ -1,3 +1,10 @@
+* {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 .order {
   background-color: var(--bg-color);
   min-height: 100vh;
@@ -76,7 +83,11 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 500;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
   color: #333;
 }
 

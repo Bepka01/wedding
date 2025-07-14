@@ -1,3 +1,10 @@
+* {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 .banner {
   background-color: var(--bg-color);
 
@@ -12,7 +19,10 @@
   flex-direction: column;
   gap: 20px;
   padding: 30px;
-  font-family: var(--font-main);
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .plus-sign {
@@ -60,19 +70,28 @@
   text-transform: uppercase;
   font-size: 25px;
   margin-bottom: 10px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .banner__text p {
   font-size: 18px;
-  font-family: var(--font-secondary);
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
   text-transform: uppercase;
   color: var(--text-color);
   margin-top: 10px;
 }
 
 .banner__data {
-  font-family: var(--font-secondary);
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -80,6 +99,10 @@
 
 .timer-container {
   text-align: center;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .timer {

@@ -28,6 +28,10 @@
   text-align: center;
   margin-bottom: 25px;
   font-size: 1.8rem;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .highlight__content {
@@ -48,6 +52,10 @@
   font-size: 22px;
   color: #333;
   font-weight: 900;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .signature {
@@ -58,6 +66,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .section-title-content {
@@ -66,6 +78,10 @@
   color: #333;
   text-transform: uppercase;
   text-align: center;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 .invitation-container {
   background-color: var(--card-bg);

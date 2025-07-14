@@ -29,7 +29,10 @@
   font-size: 28px;
   color: #5a3e2b;
   margin-bottom: 15px;
-  font-weight: 600;
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .location__place {
