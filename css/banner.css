@@ -1,7 +1,7 @@
 * {
   font-family: "Cormorant Infant", serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -17,11 +17,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
   padding: 30px;
   font-family: "Cormorant Infant", serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -29,6 +28,14 @@
   font-size: 28px;
   color: var(--bg-color);
   font-weight: bold;
+}
+
+.plus__banner {
+  font-size: 60px;
+  color: #333;
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .kid__photo {
@@ -49,7 +56,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 20px;
+  font-size: 24px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;

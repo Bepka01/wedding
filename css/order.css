@@ -47,8 +47,9 @@
   color: #333;
   font-weight: bold;
   font-family: "Great Vibes", cursive;
-  font-weight: 800;
+  font-weight: 500;
   font-style: normal;
+  font-size: 30px;
 }
 
 .content__photo {
@@ -145,10 +146,12 @@
     background-color: var(--bg-color);
     color: black;
   }
-
   .header {
     font-size: 1.6rem;
     color: #333;
+  }
+  .highlight__order {
+    font-size: 25px;
   }
 
   .section-title {

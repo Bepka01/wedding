@@ -24,12 +24,12 @@
   position: relative;
 }
 
-.header {
+.header__content {
   text-align: center;
   margin-bottom: 25px;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-family: "Great Vibes", cursive;
-  font-weight: 800;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -51,7 +51,7 @@
   font-size: 22px;
   color: #333;
   font-family: "Great Vibes", cursive;
-  font-weight: 800;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -64,17 +64,17 @@
   flex-direction: column;
   gap: 20px;
   font-family: "Great Vibes", cursive;
-  font-weight: 800;
+  font-weight: 500;
   font-style: normal;
 }
 
 .section-title-content {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   margin: 25px 0 10px;
   color: #333;
   text-align: center;
   font-family: "Great Vibes", cursive;
-  font-weight: 800;
+  font-weight: 500;
   font-style: normal;
 }
 .invitation-container {
@@ -98,7 +98,7 @@
 
 .highlight-content {
   font-family: "Great Vibes", cursive;
-  font-weight: 800;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -149,9 +149,8 @@
   .highlight__data-content {
     font-size: 20px;
   }
-
-  .header {
-    font-size: 1.6rem;
+  .header__content {
+    font-size: 30px;
   }
 
   .section-title {
@@ -163,6 +162,9 @@
 
   .signature {
     gap: 15px;
+    font-size: 1.8rem;
+  }
+  .section-title-content {
     font-size: 1.8rem;
   }
 }
