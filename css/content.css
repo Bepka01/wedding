@@ -32,6 +32,9 @@
   font-weight: 500;
   font-style: normal;
 }
+.header__content ~ p {
+  text-align: center;
+}
 
 .highlight__content {
   font-weight: 900;
