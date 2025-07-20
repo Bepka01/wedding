@@ -128,10 +128,6 @@
   transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
-  background-color: white;
-}
-
 .form-note {
   font-size: 0.9rem;
   color: gray;
