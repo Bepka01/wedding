@@ -62,3 +62,48 @@ function submitForm() {
 }
 
 btn.addEventListener("click", submitForm);
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Устанавливаем целевую дату - 27 сентября 14:30 текущего года
+  const targetDate = new Date();
+  targetDate.setMonth(8); // 8 = сентябрь (месяцы от 0 до 11)
+  targetDate.setDate(27);
+  targetDate.setHours(14);
+  targetDate.setMinutes(30);
+  targetDate.setSeconds(0);
+  targetDate.setMilliseconds(0);
+
+  const timerValues = document.querySelectorAll(".timer-value");
+  const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = timerValues;
+
+  function updateTimer() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      clearInterval(timerInterval);
+      timerValues.forEach((el) => (el.textContent = "00"));
+      return;
+    }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const weeks = Math.floor(totalSeconds / (3600 * 24 * 7));
+    const days = Math.floor((totalSeconds % (3600 * 24 * 7)) / (3600 * 24));
+    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    weeksEl.textContent = formatTime(weeks);
+    daysEl.textContent = formatTime(days);
+    hoursEl.textContent = formatTime(hours);
+    minutesEl.textContent = formatTime(minutes);
+    secondsEl.textContent = formatTime(seconds);
+  }
+
+  function formatTime(value) {
+    return value < 10 ? `0${value}` : value.toString();
+  }
+
+  updateTimer();
+  const timerInterval = setInterval(updateTimer, 1000);
+});
