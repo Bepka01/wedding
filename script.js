@@ -11,14 +11,11 @@ const btn = document.querySelector(".submit-btn");
 const errorBlock = document.querySelector(".error__block");
 
 function showErrorMessage() {
-  errorBlock.classList.add("active");
-  errorBlock.style.display = "flex";
+  errorBlock.classList.add("error__block-active");
 }
 
 function hideErrorMassage() {
-  errorBlock.classList.remove("active");
-  errorBlock.style.display = "none";
-  errorBlock.textContent = "";
+  errorBlock.classList.remove("error__block-active");
 }
 
 function clearForm() {
@@ -52,8 +49,8 @@ function submitForm() {
   };
   if (validationForm() === true) {
     console.log(data);
+    showModalWinwow();
     clearForm();
-    alert("Форма успешно отправлена");
   } else {
     showErrorMessage(
       "Заполните обязательные поля: Фамилию и имя, номер телефона "
@@ -64,9 +61,8 @@ function submitForm() {
 btn.addEventListener("click", submitForm);
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Устанавливаем целевую дату - 27 сентября 14:30 текущего года
   const targetDate = new Date();
-  targetDate.setMonth(8); // 8 = сентябрь (месяцы от 0 до 11)
+  targetDate.setMonth(8);
   targetDate.setDate(27);
   targetDate.setHours(14);
   targetDate.setMinutes(30);
@@ -107,3 +103,17 @@ document.addEventListener("DOMContentLoaded", function () {
   updateTimer();
   const timerInterval = setInterval(updateTimer, 1000);
 });
+
+const modalWindow = document.querySelector(".modal-overlay");
+
+function showModalWinwow() {
+  modalWindow.classList.add("modal__window-active");
+}
+
+const btnCloseModalWindow = document.querySelector(".modal-close");
+
+function closeModalWindow() {
+  modalWindow.classList.remove("modal__window-active");
+}
+
+btnCloseModalWindow.addEventListener("click", closeModalWindow);
