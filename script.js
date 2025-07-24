@@ -52,9 +52,7 @@ function submitForm() {
     showModalWinwow();
     clearForm();
   } else {
-    showErrorMessage(
-      "Заполните обязательные поля: Фамилию и имя, номер телефона "
-    );
+    showErrorMessage();
   }
 }
 
