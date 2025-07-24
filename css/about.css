@@ -9,6 +9,10 @@
   padding: 0 20px 40px;
 }
 
+.map {
+  padding-bottom: 10px;
+}
+
 .title__about {
   text-align: center;
   font-size: 42px;
