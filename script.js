@@ -1,43 +1,48 @@
-"use strict";
+'use strict';
 
-const fullname = document.querySelector("#fullname");
-const phone = document.querySelector("#phone");
-const guests = document.querySelector("#guests");
-const transfer = document.querySelector("#transfer");
-const children = document.querySelector("#children");
-const alcohol = document.querySelector("#alcohol");
-const comments = document.querySelector("#comments");
-const btn = document.querySelector(".submit-btn");
-const errorBlock = document.querySelector(".error__block");
+const fullname = document.querySelector('#fullname');
+const phone = document.querySelector('#phone');
+const guests = document.querySelector('#guests');
+const transfer = document.querySelector('#transfer');
+const children = document.querySelector('#children');
+const alcohol = document.querySelector('#alcohol');
+const comments = document.querySelector('#comments');
+const btn = document.querySelector('.submit-btn');
+const errorBlock = document.querySelector('.error__block');
 
 function showErrorMessage() {
-  errorBlock.classList.add("error__block-active");
+  errorBlock.classList.add('error__block-active');
 }
 
 function hideErrorMassage() {
-  errorBlock.classList.remove("error__block-active");
+  errorBlock.classList.remove('error__block-active');
 }
 
 function clearForm() {
-  fullname.value = "";
-  phone.value = "";
-  guests.value = "1";
-  transfer.value = "no";
-  children.value = "no";
-  alcohol.value = "any";
-  comments.value = "";
+  fullname.value = '';
+  phone.value = '';
+  guests.value = '1';
+  transfer.value = 'no';
+  children.value = 'no';
+  alcohol.value = 'any';
+  comments.value = '';
   hideErrorMassage();
 }
 
 function validationForm() {
   let isValid = true;
-  if (fullname.value === "" || phone.value === "") {
+  if (fullname.value === '' || phone.value === '') {
     isValid = false;
   }
   return isValid;
 }
 
-function submitForm() {
+const ENDPOINT =
+  'https://script.google.com/macros/s/AKfycbx9kq5g1UkME2LSCplyXUGbxBgR8Ia6VruOcShgne6GdJS9ClgdHiSDmVIbzUAtcgUR/exec';
+
+async function submitForm(ev) {
+  ev.preventDefault();
+
   const data = {
     name: fullname.value,
     phone: phone.value,
@@ -47,18 +52,33 @@ function submitForm() {
     alcohol: alcohol.value,
     comments: comments.value,
   };
-  if (validationForm() === true) {
-    console.log(data);
-    showModalWinwow();
-    clearForm();
-  } else {
-    showErrorMessage();
+
+  try {
+    const res = await fetch(ENDPOINT, {
+      method: 'POST',
+      redirect: 'follow',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const out = await res.json();
+
+    if (out.status === 'ok') {
+      showModalWinwow();
+      clearForm();
+    } else {
+      alert('Ошибка отправки формы');
+    }
+  } catch (e) {
+    console.error(e);
+    alert('Ошибка отправки формы');
   }
 }
 
-btn.addEventListener("click", submitForm);
+btn.addEventListener('click', submitForm);
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   const targetDate = new Date();
   targetDate.setMonth(8);
   targetDate.setDate(27);
@@ -67,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   targetDate.setSeconds(0);
   targetDate.setMilliseconds(0);
 
-  const timerValues = document.querySelectorAll(".timer-value");
+  const timerValues = document.querySelectorAll('.timer-value');
   const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = timerValues;
 
   function updateTimer() {
@@ -76,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (diff <= 0) {
       clearInterval(timerInterval);
-      timerValues.forEach((el) => (el.textContent = "00"));
+      timerValues.forEach((el) => (el.textContent = '00'));
       return;
     }
 
@@ -102,16 +122,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const timerInterval = setInterval(updateTimer, 1000);
 });
 
-const modalWindow = document.querySelector(".modal-overlay");
+const modalWindow = document.querySelector('.modal-overlay');
 
 function showModalWinwow() {
-  modalWindow.classList.add("modal__window-active");
+  modalWindow.classList.add('modal__window-active');
 }
 
-const btnCloseModalWindow = document.querySelector(".modal-close");
+const btnCloseModalWindow = document.querySelector('.modal-close');
 
 function closeModalWindow() {
-  modalWindow.classList.remove("modal__window-active");
+  modalWindow.classList.remove('modal__window-active');
 }
 
-btnCloseModalWindow.addEventListener("click", closeModalWindow);
+btnCloseModalWindow.addEventListener('click', closeModalWindow);
