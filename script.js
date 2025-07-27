@@ -12,15 +12,12 @@ const errorBlock = document.querySelector(".error__block");
 const loaderOverlay = document.querySelector(".loader-overlay");
 
 function showLoader() {
-  loaderOverlay.style.display = "flex";
-  document.body.style.overflow = "hidden";
+  loaderOverlay.classList.add("loader-overlay__active");
 }
 
 function hideLoader() {
-  loaderOverlay.style.display = "none";
-  document.body.style.overflow = "";
+  loaderOverlay.classList.remove("loader-overlay__active");
 }
-
 function showErrorMessage() {
   errorBlock.classList.add("error__block-active");
 }
