@@ -9,6 +9,17 @@ const alcohol = document.querySelector("#alcohol");
 const comments = document.querySelector("#comments");
 const btn = document.querySelector(".submit-btn");
 const errorBlock = document.querySelector(".error__block");
+const loaderOverlay = document.querySelector(".loader-overlay");
+
+function showLoader() {
+  loaderOverlay.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function hideLoader() {
+  loaderOverlay.style.display = "none";
+  document.body.style.overflow = "";
+}
 
 function showErrorMessage() {
   errorBlock.classList.add("error__block-active");
@@ -33,6 +44,7 @@ function validationForm() {
   let isValid = true;
   if (fullname.value === "" || phone.value === "") {
     isValid = false;
+    showErrorMessage();
   }
   return isValid;
 }
@@ -42,6 +54,11 @@ const ENDPOINT =
 
 async function submitForm(ev) {
   ev.preventDefault();
+
+  if (!validationForm()) return;
+
+  showLoader();
+  btn.disabled = true;
 
   const data = {
     name: fullname.value,
@@ -73,6 +90,9 @@ async function submitForm(ev) {
   } catch (e) {
     console.error(e);
     alert("Ошибка отправки формы");
+  } finally {
+    hideLoader();
+    btn.disabled = false;
   }
 }
 
