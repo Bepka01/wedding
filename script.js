@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const targetDate = new Date();
   targetDate.setMonth(8);
   targetDate.setDate(27);
-  targetDate.setHours(14);
-  targetDate.setMinutes(30);
+  targetDate.setHours(15);
+  targetDate.setMinutes(0);
   targetDate.setSeconds(0);
   targetDate.setMilliseconds(0);
 
