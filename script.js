@@ -5,7 +5,6 @@ const phone = document.querySelector("#phone");
 const guests = document.querySelector("#guests");
 const transfer = document.querySelector("#transfer");
 const children = document.querySelector("#children");
-const alcohol = document.querySelector("#alcohol");
 const comments = document.querySelector("#comments");
 const btn = document.querySelector(".submit-btn");
 const errorBlock = document.querySelector(".error__block");
@@ -32,7 +31,6 @@ function clearForm() {
   guests.value = "1";
   transfer.value = "нет";
   children.value = "нет";
-  alcohol.value = "Любой";
   comments.value = "";
   hideErrorMassage();
 }
@@ -63,7 +61,6 @@ async function submitForm(ev) {
     guests: guests.value,
     transfer: transfer.value,
     children: children.value,
-    alcohol: alcohol.value,
     comments: comments.value,
   };
 
