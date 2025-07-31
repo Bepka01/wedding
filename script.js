@@ -93,13 +93,8 @@ async function submitForm(ev) {
 btn.addEventListener("click", submitForm);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const targetDate = new Date();
-  targetDate.setMonth(8);
-  targetDate.setDate(27);
-  targetDate.setHours(15);
-  targetDate.setMinutes(0);
-  targetDate.setSeconds(0);
-  targetDate.setMilliseconds(0);
+  // Фиксированная дата: 27 сентября 2025, 15:00:00
+  const targetDate = new Date(2025, 8, 27, 15, 0, 0); // Месяцы 0-11 (8 = сентябрь)
 
   const timerValues = document.querySelectorAll(".timer-value");
   const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = timerValues;
@@ -108,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const now = new Date();
     const diff = targetDate - now;
 
+    // Если дата достигнута или прошла
     if (diff <= 0) {
       clearInterval(timerInterval);
       timerValues.forEach((el) => (el.textContent = "00"));
@@ -132,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return value < 10 ? `0${value}` : value.toString();
   }
 
-  updateTimer();
+  updateTimer(); // Запускаем сразу, чтобы не было задержки в 1 секунду
   const timerInterval = setInterval(updateTimer, 1000);
 });
 
