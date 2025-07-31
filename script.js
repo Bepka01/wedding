@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const now = new Date();
     const diff = targetDate - now;
 
-    // Если дата достигнута или прошла
     if (diff <= 0) {
       clearInterval(timerInterval);
       timerValues.forEach((el) => (el.textContent = "00"));
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return value < 10 ? `0${value}` : value.toString();
   }
 
-  updateTimer(); // Запускаем сразу, чтобы не было задержки в 1 секунду
+  updateTimer();
   const timerInterval = setInterval(updateTimer, 1000);
 });
 
