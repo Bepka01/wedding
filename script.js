@@ -93,8 +93,7 @@ async function submitForm(ev) {
 btn.addEventListener("click", submitForm);
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Фиксированная дата: 27 сентября 2025, 15:00:00
-  const targetDate = new Date(2025, 8, 27, 15, 0, 0); // Месяцы 0-11 (8 = сентябрь)
+  const targetDate = new Date(2025, 8, 27, 15, 0, 0);
 
   const timerValues = document.querySelectorAll(".timer-value");
   const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = timerValues;
