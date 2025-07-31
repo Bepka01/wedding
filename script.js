@@ -95,8 +95,37 @@ btn.addEventListener("click", submitForm);
 document.addEventListener("DOMContentLoaded", function () {
   const targetDate = new Date(2025, 8, 27, 15, 0, 0);
 
-  const timerValues = document.querySelectorAll(".timer-value");
-  const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = timerValues;
+  const weeksEl = document.querySelector(
+    ".timer-block:nth-child(1) .timer-value"
+  );
+  const daysEl = document.querySelector(
+    ".timer-block:nth-child(3) .timer-value"
+  );
+  const hoursEl = document.querySelector(
+    ".timer-block:nth-child(5) .timer-value"
+  );
+  const minutesEl = document.querySelector(
+    ".timer-block:nth-child(7) .timer-value"
+  );
+  const secondsEl = document.querySelector(
+    ".timer-block.seconds-block .timer-value"
+  );
+
+  const weeksLabel = document.querySelector(
+    ".timer-block:nth-child(1) .timer-label"
+  );
+  const daysLabel = document.querySelector(
+    ".timer-block:nth-child(3) .timer-label"
+  );
+  const hoursLabel = document.querySelector(
+    ".timer-block:nth-child(5) .timer-label"
+  );
+  const minutesLabel = document.querySelector(
+    ".timer-block:nth-child(7) .timer-label"
+  );
+  const secondsLabel = document.querySelector(
+    ".timer-block.seconds-block .timer-label"
+  );
 
   function updateTimer() {
     const now = new Date();
@@ -104,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (diff <= 0) {
       clearInterval(timerInterval);
-      timerValues.forEach((el) => (el.textContent = "00"));
+      [weeksEl, daysEl, hoursEl, minutesEl, secondsEl].forEach(
+        (el) => (el.textContent = "00")
+      );
       return;
     }
 
@@ -120,6 +151,29 @@ document.addEventListener("DOMContentLoaded", function () {
     hoursEl.textContent = formatTime(hours);
     minutesEl.textContent = formatTime(minutes);
     secondsEl.textContent = formatTime(seconds);
+
+    weeksLabel.textContent = pluralize(weeks, ["неделя", "недели", "недель"]);
+    daysLabel.textContent = pluralize(days, ["день", "дня", "дней"]);
+    hoursLabel.textContent = pluralize(hours, ["час", "часа", "часов"]);
+    minutesLabel.textContent = pluralize(minutes, [
+      "минута",
+      "минуты",
+      "минут",
+    ]);
+    secondsLabel.textContent = pluralize(seconds, [
+      "секунда",
+      "секунды",
+      "секунд",
+    ]);
+  }
+
+  function pluralize(number, titles) {
+    const cases = [2, 0, 1, 1, 1, 2];
+    return titles[
+      number % 100 > 4 && number % 100 < 20
+        ? 2
+        : cases[Math.min(number % 10, 5)]
+    ];
   }
 
   function formatTime(value) {
